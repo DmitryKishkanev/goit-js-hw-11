@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// Функция запроса на бэкенд
 export default function fetchData(query) {
   return axios
     .get('https://pixabay.com/api/', {
