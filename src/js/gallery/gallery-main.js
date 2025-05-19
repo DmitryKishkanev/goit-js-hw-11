@@ -1,13 +1,13 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import fetchData from './js/pixabay-api';
+import fetchData from './pixabay-api';
 import {
   createGallery,
   clearGallery,
   showLoader,
   hideLoader,
-} from './js/render-functions';
+} from './render-functions';
 
 const formEl = document.querySelector('.form');
 

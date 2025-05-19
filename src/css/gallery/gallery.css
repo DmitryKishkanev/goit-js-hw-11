@@ -1,3 +1,10 @@
+body {
+  background-image: url('../img/background-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .gallery {
   display: grid;
   width: 1128px;
