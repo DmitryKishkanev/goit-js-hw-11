@@ -1,6 +1,12 @@
-body {
+.cat-info-body {
+  align-items: center;
+
   background-image: url('../img/background-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.breed-select {
+  margin-top: 32px;
 }

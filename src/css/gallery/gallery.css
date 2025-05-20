@@ -1,5 +1,7 @@
-body {
+.gallery-body {
   align-items: center;
+
+  background-image: url('../img/background-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
