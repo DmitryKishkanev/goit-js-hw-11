@@ -8,6 +8,7 @@ import {
   showLoader,
   hideLoader,
 } from './render-functions';
+import '../../css/styles.css';
 
 const formEl = document.querySelector('.form');
 
