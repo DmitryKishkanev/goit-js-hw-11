@@ -1,0 +1,2 @@
+import"./assets/styles-DXaELHI0.js";import{a as o}from"./assets/vendor-DAobNtaX.js";const c="live_ gCrMzxVedQewgspyzOBQIG2uzIc7uX ZZLlOa2KWOyd9IsmmF2onJcOmaXJlO sQfP";o.defaults.headers.common["x-api-key"]=c;function a(){return o.get("https://api.thecatapi.com/v1/breeds").then(e=>e.data)}const r=document.querySelector(".breed-select");a().then(e=>{i(e)});function i(e){e.forEach(n=>{const t=document.createElement("option");t.value=n.id,t.textContent=n.name,r.appendChild(t)})}
+//# sourceMappingURL=2-cat-info.js.map
