@@ -6,6 +6,58 @@
   background-repeat: no-repeat;
 }
 
-.breed-select {
+.cats-title {
   margin-top: 32px;
+
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.breed-select {
+  margin-top: 10px;
+  padding: 5px 70px 5px 10px;
+
+  border: 2px solid #808080;
+  border-radius: 4px;
+
+  outline: none;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border: 2px solid #2196f3;
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+.cat-info {
+  margin: 0 auto;
+}
+
+.cat-card {
+  display: flex;
+  width: 1800px;
+  margin-top: 20px;
+}
+
+.cat-img {
+  width: 500px;
+}
+
+.cat-description {
+  display: block;
+  padding: 10px 20px;
 }
