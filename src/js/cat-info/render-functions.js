@@ -1,10 +1,16 @@
+// Именованный импорт
 import { fetchBreedInfo } from './cat-api';
 
+// Получаем в переменную HTML-элемент loader
 const loaderEl = document.querySelector('.loader');
 
+// Функция создания списка всех пород кошек
 function createSelect(breeds, breedSelect) {
+  // Отображаем HTML-элемент списка
   breedSelect.classList.remove('is-hidden');
 
+  // Перебераем через forEach полученный из запросак массив объектов
+  // и отображаем имена пород в списке
   breeds.forEach(breed => {
     const option = document.createElement('option');
     option.value = breed.id;
@@ -13,16 +19,16 @@ function createSelect(breeds, breedSelect) {
   });
 }
 
+// Функция отображения информации о выбранной породе
 function createInfo(card, breedSelect, infoContainer, iziToastOptions) {
+  // Сохраняем в перменную объект полученный из запроса
   const cat = card.data[0];
 
+  // Реализация допролнительного запроса информации по значению выбранному из списка,
+  // создание отобаржаемой карточки,
+  // обработка ошибки
   fetchBreedInfo(breedSelect.value)
     .then(breed => {
-      if (!breed) {
-        infoContainer.innerHTML = `<p>Информация о породе недоступна.</p>`;
-        return;
-      }
-
       const cardMarkup = `
 <div class="cat-card">
   <img src="${cat.url}" alt="${breed.name}" class="cat-img" />
@@ -33,10 +39,14 @@ function createInfo(card, breedSelect, infoContainer, iziToastOptions) {
   </div>
 </div>
     `;
+      // Отображаем контейнер
       infoContainer.classList.remove('is-hidden');
+
+      // Добавляем в контейнер нашу карточку
       infoContainer.innerHTML = cardMarkup;
     })
     .catch(error => {
+      // Отображаем сообщение об ошибке
       iziToastOptions(error);
     });
 }
@@ -51,4 +61,5 @@ function hideLoader() {
   loaderEl.classList.remove('active');
 }
 
+// Именованный экспорт всех функций
 export { createSelect, createInfo, showLoader, hideLoader };

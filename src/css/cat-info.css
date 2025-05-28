@@ -6,8 +6,13 @@
   background-repeat: no-repeat;
 }
 
-.cats-title {
+.select-container {
+  display: flex;
   margin-top: 32px;
+}
+
+.cats-title {
+  margin-right: 10px;
 
   font-weight: 600;
   font-size: 28px;
@@ -17,7 +22,6 @@
 }
 
 .breed-select {
-  margin-top: 10px;
   padding: 5px 70px 5px 10px;
 
   border: 2px solid #808080;
@@ -25,7 +29,7 @@
 
   outline: none;
 
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   line-height: 133%;
   letter-spacing: 0.04em;
@@ -50,7 +54,7 @@
 .cat-card {
   display: flex;
   width: 1800px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .cat-img {

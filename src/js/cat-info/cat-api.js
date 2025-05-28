@@ -5,12 +5,14 @@ const myApiKey =
 
 axios.defaults.headers.common['x-api-key'] = myApiKey;
 
+// Функция запроса на бэкенд всех пород кошек
 function fetchBreeds() {
   return axios.get('https://api.thecatapi.com/v1/breeds').then(response => {
     return response.data;
   });
 }
 
+// Функция запроса на бэкенд одной породы кошки, ожидающая получить аргументом Id породы
 function fetchBreedInfo(breedId) {
   return axios
     .get(`https://api.thecatapi.com/v1/breeds/${breedId}`)
@@ -19,6 +21,7 @@ function fetchBreedInfo(breedId) {
     });
 }
 
+// Функция запроса на бэкенд фотографии кошеки, ожидающая получить аргументом Id породы
 function fetchCatByBreed(breedId) {
   return axios
     .get(`https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`)
@@ -27,4 +30,5 @@ function fetchCatByBreed(breedId) {
     });
 }
 
+// Именованный экспорт всех функций
 export { fetchBreeds, fetchBreedInfo, fetchCatByBreed };
