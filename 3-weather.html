@@ -6,12 +6,22 @@
     <title>Weather</title>
     <script type="module" crossorigin src="/goit-js-hw-11/3-weather.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/styles-Bx2iRc3n.js">
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-DAobNtaX.js">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/styles-DqX2xZSa.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-DM5B1YhI.css">
   </head>
   <body class="weather-body">
-    <ul class="weather"></ul>
+    <form action="submit" class="js-search">
+      <input type="text" name="query" />
+      <select name="days">
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="10">10</option>
+        <option value="14">14</option>
+      </select>
+      <button>Search</button>
+    </form>
+
+    <ul class="js-list"></ul>
 
   </body>
 </html>
