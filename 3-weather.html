@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
     <script type="module" crossorigin src="/goit-js-hw-11/3-weather.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/styles-Bx2iRc3n.js">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/styles-DqX2xZSa.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/styles-ZTTaWih3.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-Do1ajUWv.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/styles-qIm_3A7w.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-DM5B1YhI.css">
   </head>
   <body class="weather-body">
     <form action="submit" class="js-search">
-      <input type="text" name="query" />
-      <select name="days">
+      <input type="text" name="query" placeholder="Enter city..." />
+      <select name="days" class="weather-select">
         <option value="3">3</option>
         <option value="5">5</option>
         <option value="7">7</option>
@@ -20,6 +22,8 @@
       </select>
       <button>Search</button>
     </form>
+
+    <span class="loader"></span>
 
     <ul class="js-list"></ul>
 
