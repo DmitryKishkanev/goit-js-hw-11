@@ -26,12 +26,12 @@ function onFormSubmit(evt) {
   showLoader();
 
   // Сохраняем в переменную данные из инпута
-  // const searchInput = evt.target.elements.namedItem('search-text').value.trim();
   const searchInput = evt.currentTarget.elements['search-text'].value.trim();
 
   // Обрабатываем промис функции запроса на бэкенд
   fetchData(searchInput)
     .then(response => {
+      // Если ответ пришёл с ошибкой
       if (response.hits.length === 0) {
         // Вызов нотификации
         iziToastOptions(

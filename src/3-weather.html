@@ -7,8 +7,8 @@
   </head>
   <body class="weather-body">
     <form action="submit" class="js-search">
-      <input type="text" name="query" />
-      <select name="days">
+      <input type="text" name="query" placeholder="Enter city..." />
+      <select name="days" class="weather-select">
         <option value="3">3</option>
         <option value="5">5</option>
         <option value="7">7</option>
@@ -17,6 +17,8 @@
       </select>
       <button>Search</button>
     </form>
+
+    <span class="loader"></span>
 
     <ul class="js-list"></ul>
 
