@@ -24,9 +24,11 @@ function onSearch(evt) {
   fetchWeather(query.value.trim(), days.value)
     .then(
       // Создаём карточки с данными из бэкенда
-      data => (list.innerHTML = createMarkup(data.forecast.forecastday)),
-      // Очищаем инпут
-      search.reset()
+      data => {
+        list.innerHTML = createMarkup(data.forecast.forecastday);
+        // Очищаем инпут
+        search.reset();
+      }
     )
     .catch(error => {
       console.log(error);

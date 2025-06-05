@@ -1,13 +1,14 @@
 import axios from 'axios';
 
-const myApiKey = '50268892-929648ae4af930c873d247de9';
-
 // Функция запроса на бэкенд
 export function fetchData(query) {
+  const BASE_URL = 'https://pixabay.com/api/';
+  const API_KEY = '50268892-929648ae4af930c873d247de9';
+
   return axios
-    .get('https://pixabay.com/api/', {
+    .get(BASE_URL, {
       params: {
-        key: myApiKey,
+        key: API_KEY,
         q: query,
         image_type: 'photo',
         orientation: 'horizontal',
