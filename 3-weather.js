@@ -3,5 +3,5 @@ import"./assets/styles-ZTTaWih3.js";import{i as s}from"./assets/vendor-Do1ajUWv.
           <p>${r}</p>
           <h2>${t}</h2>
           <h3>${n} &deg;С</h3>
-        </li>`).join("")}const a=document.querySelector(".js-search"),i=document.querySelector(".js-list"),c=document.querySelector(".loader");a.addEventListener("submit",f);function f(e){e.preventDefault(),d(),m();const{query:t,days:n}=e.currentTarget.elements;u(t.value.trim(),n.value).then(o=>i.innerHTML=h(o.forecast.forecastday),a.reset()).catch(o=>{console.log(o)}).finally(()=>{y()})}function d(){i.innerHTML=""}function m(){c.classList.add("active")}function y(){c.classList.remove("active")}
+        </li>`).join("")}const a=document.querySelector(".js-search"),i=document.querySelector(".js-list"),c=document.querySelector(".loader");a.addEventListener("submit",f);function f(e){e.preventDefault(),d(),m();const{query:t,days:n}=e.currentTarget.elements;u(t.value.trim(),n.value).then(o=>{i.innerHTML=h(o.forecast.forecastday),a.reset()}).catch(o=>{console.log(o)}).finally(()=>{y()})}function d(){i.innerHTML=""}function m(){c.classList.add("active")}function y(){c.classList.remove("active")}
 //# sourceMappingURL=3-weather.js.map
