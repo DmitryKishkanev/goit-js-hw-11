@@ -26,6 +26,7 @@ function onSearch(evt) {
       // Создаём карточки с данными из бэкенда
       data => {
         list.innerHTML = createMarkup(data.forecast.forecastday);
+        console.log(data);
         // Очищаем инпут
         search.reset();
       }
