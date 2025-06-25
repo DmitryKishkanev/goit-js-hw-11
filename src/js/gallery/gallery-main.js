@@ -30,9 +30,9 @@ function onFormSubmit(evt) {
 
   // Обрабатываем промис функции запроса на бэкенд
   fetchData(searchInput)
-    .then(response => {
+    .then(data => {
       // Если ответ пришёл с ошибкой
-      if (response.hits.length === 0) {
+      if (data.hits.length === 0) {
         // Вызов нотификации
         iziToastOptions(
           'Sorry, there are no images matching your search query. Please try again!',
@@ -40,7 +40,7 @@ function onFormSubmit(evt) {
         );
       }
       // Создаём галерю с данными из бэкенда
-      createGallery(response.hits);
+      createGallery(data.hits);
       // Очищаем инпут
       formEl.reset();
     })
